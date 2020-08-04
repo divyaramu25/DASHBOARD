@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <!-- Font Awesome CDN -->
+  <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+  </script>
+  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse"
+      data-target="#dashboardNavbar"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="dashboardNavbar">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- sidebar -->
+          <div class="col-xl-2 col-lg-3 col-md-4 fixed-top sidebar">
+            <!-- Navbar-brand -->
+            <a href="" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-3 bottom-border">Skill
+              Safari</a>
+            <!-- Profile Container -->
+            <div class="bottom-border pb-3">
+              <img src="img/admin.jpeg" alt="profilPic" width="50" class="rounded-circle mr-3">
+              <a href="#" class="text-white">Divya_Project</a>
+            </div>
+            <!-- sidebar Nav-items -->
+            <ul class="navbar-nav flex-column mt-4">
+              <li class="nav-item">
+                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link active">
+                  <i class="fas fa-home text-light fa-lg mr-3 "></i>Dashboard
+                </a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-user text-light fa-lg mr-3"></i>Profile</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-chart-line text-light fa-lg mr-3"></i>Analytics</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-chart-bar text-light fa-lg mr-3"></i>Charts</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-table text-light fa-lg mr-3"></i>Tables</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                    class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a></li>
+            </ul>
+          </div>
+          <!-- Main Navbar -->
+          <div class="col-xl-10 col-lg-9 col-md-8 fixed-top py-2 top-navbar ml-auto bg-dark">
+            <div class="row align-items-center">
+              <!-- Title -->
+              <div class="col-md-5">
+                <h4 class="text-light text-uppercase mb-0">Dashboard</h4>
+              </div>
+              <div class="col-md-4">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control search" placeholder="Search">
+                    <button class="btn btn-white search-btn"> <i class="fas fa-search text-danger"></i></button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item icon-notify"><a href="#" class="nav-link icon-notify-link"><i
+                        class="fas fa-comments text-muted fa-lg"></i></a></li>
+                  <li class="nav-item icon-notify"><a href="#" class="nav-link icon-notify-link"><i
+                        class="fas fa-bell text-muted fa-lg"></i></a></li>
+                  <li class="nav-item ml-md-auto"><a href="" class="nav-link" data-toggle="modal"
+                      data-target="#logout"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!---Navbar Ends-->
+
+  <!----card starts-->
+  <section> 
+   <div class="container-fluid">
+       <div class="row ">
+           <div class="col-xl-10 col-lg-9 col-md-8 ml-auto ">
+              <div class="row pt-md-5 mt-md-3 mb-5">
+                  <div class="col-xl-3 col-md-6 p-2 card-col ">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                           <div class="text-right-secondary">
+                              <h3>Sales</h3>
+                              <h5>$125000</h5>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-secondary">
+                        <i class="fas fa-sync"></i>
+                        <span>Updated Now</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 p-2 card-col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          
+                          <i class="fas fa-money-bill-alt fa-3x text-success"></i>
+                           <div class="text-right-secondary">
+                              <h3>Expenses</h3>
+                              <h5>$25000</h5>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-secondary">
+                        <i class="fas fa-sync"></i>
+                        <span>Updated Now</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 p-2 card-col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <i class="fas fa-users fa-3x text-info"></i>
+                           <div class="text-right-secondary">
+                              <h3>Users</h3>
+                              <h5>25000</h5>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-secondary">
+                        <i class="fas fa-sync"></i>
+                        <span>Updated Now</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-md-6 p-2 card-col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <i class="fas fa-chart-line fa-3x text-danger"></i>
+                           <div class="text-right-secondary">
+                              <h3>Visitors</h3>
+                              <h5>15000</h5>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-secondary">
+                        <i class="fas fa-sync"></i>
+                        <span>Updated Now</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>              
+           </div>
+       </div>
+   </div>
+  </section>
+  <!----card Ends-->
+
+  <!---table starts-->
+  <section>
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row">
+            <div class="col-xl-6 col-12 mb-5">
+              <h3 class="text-center text-secondary p-2">Staff Salary</h3>
+              <table class="table text-center table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th> Name</th>
+                    <th> Salary</th>
+                    <th> Date</th>
+                    <th> Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><button class="btn btn-primary">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Karthi</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><button class="btn btn-primary">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Saru</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><button class="btn btn-primary">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Ramu</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><button class="btn btn-primary">Message</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Rocky</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><button class="btn btn-primary">Message</button></td>
+                  </tr>
+                </tbody>
+              </table> 
+
+              <!---pagination-->
+            
+              <nav class="ml-auto ">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><a href="" class="page-link">
+                      <span>&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a></li>
+                  <li class="page-item active"><a href="" class="page-link">1</a></li>
+                  <li class="page-item"><a href="" class="page-link">2</a></li>
+                  <li class="page-item"><a href="" class="page-link">3</a></li>
+                  <li class="page-item"><a href="" class="page-link">4</a></li>
+                  <li class="page-item"><a href="" class="page-link">
+                      <span>&raquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a></li>
+                </ul>
+              </nav>
+            
+              <!---pagination ends-->
+            </div> 
+
+            
+            <div class="col-xl-6 col-12 mb-5">
+              <h3 class="text-center text-muted p-2">Recent Payments</h3>
+              <table class="table table-hover text-center table-dark text-light">
+                <thead>
+                  <tr class="text-center text-secondary">
+                    <th>#</th>
+                    <th> Name</th>
+                    <th> Salary</th>
+                    <th> Date</th>
+                    <th> Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-success w-75 p-2">Apporved</div></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-success w-75 p-2">Apporved</div></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-danger w-75 p-2">Declined</div></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-success w-75 p-2">Apporved</div></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-danger w-75 p-2">Declined</div></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Divya</td>
+                    <td>$2500</td>
+                    <td>25/05/2018</td>
+                    <td><div class="badge badge-danger w-75 p-2">Declined</div></td>
+                  </tr>
+                </tbody>
+              </table> 
+
+              <!---pagination-->
+              <nav aria-label="...">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item ">
+                    <a class="page-link" href="#!" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link " href="#!">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <!--pagination Ends-->
+            </div>             
+          </div>          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!----table ends-->
+
+  <!--progress & lists-->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row mb-4 align-items-center ">
+               <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+                 <div class="bg-dark p-3 rounded">
+                  <h3 class="bg-dark text-light mb-5 ">Conversion Rates</h3>
+                  <h6 class="bg-dark text-light mb-4">Google chrome</h6>
+                  <div class="progress mb-4">
+                  <div class="progress-bar progress-bar-striped bg-primary " role="progressbar" style="width: 91%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">91%</div>
+                  </div>
+                  <h6 class="bg-dark text-light mb-4">Mozilla Firefox</h6>
+                  <div class="progress mb-4">
+                 <div class="progress-bar progress-bar-striped bg-danger " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div>
+                  <h6 class="bg-dark text-light mb-4">Safari</h6>
+                  <div class="progress mb-4">
+                 <div class="progress-bar progress-bar-striped bg-success " role="progressbar" style="width:67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">67%</div>
+                  </div>
+                  <h6 class="bg-dark text-light mb-4">IE</h6>
+                  <div class="progress mb-4">
+                 <div class="progress-bar progress-bar-striped bg-info " role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">12%</div>
+                  </div>
+                 </div>             
+               </div>
+                <div class="col-xl-6 col-12 ">
+                    <h4 class="text-muted mb-4 p-3  ">Tasks:</h4>
+                    <div class="container-fluid task-item">
+                      <div class="row py-3 mb-4 task-border bg-white align-items-center">
+                        <div class="col-1">
+                           <input class="bg-primary" type="checkbox" checked>
+                        </div>
+                        <div class="col-sm-9 col-8 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto?</div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-trash-alt text-danger"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid task-item">
+                      <div class="row py-3 mb-4 task-border bg-white align-items-center">
+                        <div class="col-1">
+                           <input class="bg-primary" type="checkbox" checked>
+                        </div>
+                        <div class="col-sm-9 col-8 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto?</div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-trash-alt text-danger"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid task-item">
+                      <div class="row py-3 mb-4 task-border bg-white align-items-center">
+                        <div class="col-1">
+                           <input class="bg-primary" type="checkbox" checked>
+                        </div>
+                        <div class="col-sm-9 col-8 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto?</div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-trash-alt text-danger"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid task-item">
+                      <div class="row py-3 mb-4 task-border bg-white align-items-center">
+                        <div class="col-1">
+                           <input class="bg-primary" type="checkbox" checked>
+                        </div>
+                        <div class="col-sm-9 col-8 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto?</div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-trash-alt text-danger"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid task-item">
+                      <div class="row py-3 mb-4 task-border bg-white align-items-center">
+                        <div class="col-1">
+                           <input class="bg-primary" type="checkbox" checked>
+                        </div>
+                        <div class="col-sm-9 col-8 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto?</div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-edit"></i></a>
+                        </div>
+                        <div class="col-1">
+                          <a href="#" class=""><i class="fas fa-trash-alt text-danger"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                         
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---progress &  lists Ends-->
+
+  <!---recent activites--->
+  <section>
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-xl-10 col-xl-9 col-md-8 ml-auto ">
+         <div class="row mb-4 align-items-center  ">
+          <div class="col-xl-7 col-12 mb-5">
+          <h3 class="text-muted mb-4" >Recent Customer Activities</h3>
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <img src="img/cust1.jpeg" alt="" class="img">
+                    John posted a new comment
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="img/cust2.jpeg" alt="" class="img">
+                    Lisa posted a new comment
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <img src="img/cust3.jpeg" alt="" class="img">
+                    Mark posted a new comment
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingFour">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <img src="img/cust4.jpeg" alt="" class="img">
+                    Lilly posted a new comment
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingFive">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <img src="img/cust5.jpeg" alt="" class="img">
+                    samy posted a new comment
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingSix">
+                <h5 class="mb-0">
+                  <button class="btn btn-block bg-secondary text-light text-left" class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <img src="img/cust6.jpeg" alt="" class="img">
+                    Dev posted a new comment
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col-xl-5 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="text-center text-muted mb-4">Quick Status Post</h5>
+                <ul class="list-inline text-center py-3">
+                  <li class="list-inline-item text-center mr-3">
+                    <i class="fas fa-pencil-alt text-success"></i>
+                    <a href="#" class="text-secondary">Status</a>
+                  </li>
+                  <li class="list-inline-item text-center mr-3">
+                    <i class="fas fa-camera text-warning"></i>
+                    <a href="#" class="text-secondary">Photo</a>
+                  </li>
+                  <li class="list-inline-item text-center mr-3">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                    <a href="#" class="text-secondary">Check-in</a>
+                  </li>
+                </ul>
+                <form>
+                  <div class="form-group row  px-3">                  
+                    <input type="email" class="form-control" id="status" placeholder="What's your Status">
+                    
+                  </div>
+                  <div class="form-group row px-3 ">                    
+                      <button type="submit" class="btn btn-info btn-block">SUBMIT POST</button>                    
+                  </div>
+                </form>
+               <div class="row mt-5 ">
+                <div class="col-6 text-center">
+                 <div class="card">
+                  <div class="card-body ">
+                    <i class="fas fa-calendar-alt fa-5x text-warning mb-4"></i>
+                    <h6>MON,MAY 26</h6>
+                  </div>
+                 </div>
+                </div>
+                <div class="col-6 text-center mb-3">
+                 <div class="card">
+                  <div class="card-body">
+                    <i class="fas fa-clock fa-5x text-danger mb-4 "></i>
+                    <h6>3.30 A.M</h6>
+                  </div>
+                 </div>
+                </div> 
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---recent activites ends --->
+  
+  <!---Footer-->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row border-top pt-3">
+            <div class="col-xl-6 text-center text-muted">
+              <ul class="list-inline">
+                <li class="list-inline-item mr-3">Skill&Safari</li>
+                <li class="list-inline-item mr-3">About</li>
+                <li class="list-inline-item mr-3">Support</li>
+                <li class="list-inline-item mr-3">
+                  <a href="#" class="text-muted"></a>
+                  Blog</li>
+              </ul>
+            </div>
+            <div class="col-xl-6 text-center text-muted">
+              <p>
+                © 2020 Copyright. Made With 
+                <i class="fas fa-heart text-danger"></i>
+                by
+                <span class="text-success">Skill Safari</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!---Footer Ends -->
+  
+
+
+
+
+
+  <!-- Modals -->
+  <div class="modal fade" id="logout">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Are you sure to Logout?</h4>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Confirm by pressing Logout Button
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-outline-danger" data-dismiss="modal">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
